@@ -29,9 +29,9 @@ See comments found in ./_Build folder files for details.
   <projectsToAttach />
   <virtualSolutionFolders>
     <virtualSolutionFolder name="_Solution">
-      <file path="/.editorconfig" />
-      <file path="/.gitattributes" />
-      <file path="/.gitignore" />
+      <file path="/$emptyString$.editorconfig" />
+      <file path="/$emptyString$.gitattributes" />
+      <file path="/$emptyString$.gitignore" />
       <file path="/nuget.config" />
       <file path="/README.md" />
     </virtualSolutionFolder>
