@@ -1,5 +1,5 @@
 <templateManifest typeOfTemplate="Solution">
-  <name>EXAMPLE:: Clean Helix Solution - ('CLASSIC' CSPROJ STYLE)</name>
+  <name>EXAMPLE:: Clean Helix Solution - ('CLASSIC' PROJECT STYLE)</name>
   <description>An example blank Helix Solution - 'classic' using the old cs project format. 
     
     Note; use a file path rather than an URL for publishing to allow msbuild publish of sln file (10x faster than running individual project publish).</description>

@@ -1,7 +1,7 @@
 <Project>
     <PropertyGroup>
         <!-- Set solution-wide config file for binding redirects -->
-        <AppConfig>$(SolutionDir)\_Build\Solution.config</AppConfig>
+        <AppConfig>$(SolutionDir)\_Build\AssemblyBindings.config</AppConfig>
 
         <PublishTargetDirectory>$(PublishPathWebsite)</PublishTargetDirectory>
         <UseFileSystemPublishProfile>true</UseFileSystemPublishProfile>

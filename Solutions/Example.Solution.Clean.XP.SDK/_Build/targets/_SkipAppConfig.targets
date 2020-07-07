@@ -1,0 +1,21 @@
+<!--
+***********************************************************************************************
+_SkipAppConfig.targets
+  
+  Ensure msbuild does not generate .dll.configs even though appconfig is set 
+  to AssemblyBindings.config to remove compile time warnings. 
+  
+                                                                      [Anders Laub // Laub+Co]
+                                                                      
+***********************************************************************************************
+-->
+
+<Project>
+
+  <Target Name="_SkipAppConfig" BeforeTargets="_CopyAppConfigFile" Condition="'@(AppConfigWithTargetPath)' != ''">
+    <ItemGroup>
+      <AppConfigWithTargetPath Remove="$(AppConfig)" />
+    </ItemGroup>
+  </Target>
+
+ </Project> 

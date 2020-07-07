@@ -1,5 +1,5 @@
 <templateManifest typeOfTemplate="Module">
-  <name>EXAMPLE TEMPLATE:: Sitecore Helix Module (SDK STYLE) - </name>
+  <name>EXAMPLE TEMPLATE:: Sitecore Helix Module (SDK PROJECT STYLE) - </name>
   <description>Targets platform/website - standalone,cm,cd)</description>
   <version>2.0.0</version>
   <author>Anders Laub</author>

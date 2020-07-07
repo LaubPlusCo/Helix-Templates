@@ -1,5 +1,5 @@
 <templateManifest typeOfTemplate="Solution">
-  <name>Empty Helix Solution for a Sitecore XP 9.3 solution (SDK STYLE)</name>
+  <name>Empty Helix Solution for a Sitecore XP 9.3 solution (SDK PROJECT STYLE)</name>
   <description>This template is configured to publish to a locally installed Sitecore XP0 setup.
 
 Important: This template use the SDK project file format and require VS2017 (15.6) or newer. 
@@ -49,7 +49,7 @@ See comments found in ./_Build folder files for more details on build and auto p
       <file path="/Directory.Build.targets" />
       <file path="/Directory.Build.props" />
       <file path="/Default.Properties.props.user" />
-      <file path="/_build/Solution.config" />
+      <file path="/_build/AssemblyBindings.config" />
       <virtualSolutionFolder name="props">
         <file path="/_build/props/_NetFramework.PublishProfile.props" />
         <file path="/_build/props/_NetFramework.References.props" />
