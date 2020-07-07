@@ -1,0 +1,13 @@
+<Project>
+    <!-- Import build properties for individual project publish target type -->
+    <Import Project="$(SitecoreRoleType).*.props" 
+                Condition="'$(SitecoreRoleType)' != ''" />
+
+    <!-- Import user properties for  individual project publish target type 
+            project publish target type -->
+    <Import Project="$(SitecoreRoleType).Properties.props.user" 
+            Condition="'$(SitecoreRoleType)' != '' AND exists('$(_SitecoreRoleTypeUserProps)')" />
+
+    <Import Project="_TestProject.props" Condition="'$(IsTestProject)' == 'true'" />
+
+</Project>

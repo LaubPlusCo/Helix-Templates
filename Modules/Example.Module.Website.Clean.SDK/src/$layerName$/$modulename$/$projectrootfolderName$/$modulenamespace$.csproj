@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>$netframeworkversion$</TargetFramework>
+    <RootNamespace>$moduleNamespace$</RootNamespace>
+    <AssemblyName>$moduleNamespace$</AssemblyName>
+    <SitecoreRoleType>website</SitecoreRoleType>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\_Build\props\_SitecoreRoleType.props" />
+</Project>

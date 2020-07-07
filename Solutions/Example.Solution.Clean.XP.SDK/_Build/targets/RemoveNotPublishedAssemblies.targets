@@ -1,0 +1,17 @@
+<!--
+***********************************************************************************************
+RemoveDoNotPublishAssembly.targets
+  TODO: Update to read assemblylist .csv file from Sitecore.
+  
+                                                                      [Anders Laub // Laub+Co]
+***********************************************************************************************
+-->
+
+<Project>
+    <Target Name="RemoveNotPublishedAssemblies" AfterTargets="ResolveReferences" Condition="$(LegacyRemoveNotPublishedAssemblies) == 'true'">
+        <ItemGroup>
+            <ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)" 
+                                        Condition="'%(Filename)' != '' and '@(DoNotPublishAssembly)' != ''" />
+        </ItemGroup>
+    </Target>
+</Project>
