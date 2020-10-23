@@ -9,7 +9,7 @@
   <saveOnCreate>true</saveOnCreate>
   <templateEngine type="LaubPlusCo.Foundation.HelixTemplating.TemplateEngine.DefaultHelixTemplateEngine, LaubPlusCo.Foundation.HelixTemplating" />
   <replacementTokens>
-    <token key="$publishPath$" displayName="Publish to file path" required="true" default="C:\Websites\MyInstance" input="Text" />
+    <token key="$publishPath$" displayName="Publish to file path" required="true" default="C:\Websites\my.Sitecore.local" input="Text" />
   </replacementTokens>
   <projectsToAttach />
   <virtualSolutionFolders>

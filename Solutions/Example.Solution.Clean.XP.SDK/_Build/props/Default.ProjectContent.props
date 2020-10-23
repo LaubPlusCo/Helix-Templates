@@ -14,58 +14,48 @@ Build.Content.props
 -->
 
 <Project>
-    <ItemGroup>
-        <Content Include="App_Config\**\*.config" Exclude="$(BaseIntermediateOutputPath)**\*.*">
-            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-        </Content>
-        
-        <Content Include="Views\**\*.cshtml" Exclude="$(BaseIntermediateOutputPath)**\*.*">
-            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-        </Content>
 
-        <Content Include="**\*.aspx;**\*.ascx;*.ashx" Exclude="$(BaseIntermediateOutputPath)**\*.*">
-            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-        </Content>
+  <PropertyGroup>
+    <_DefaultContentTypes>
+        **\*.html;
+        **\*.cshtml;
+        **\*.aspx;
+        **\*.ascx;
+        **\*.ashx;
+        **\*.config;
+        **\*.manifest;
+        **\*.js;
+        **\*.json;
+        **\*.css;
+        **\*.xml;
+        **\*.txt;
+        **\*.html;
+        **\*.htm;
+        **\*.png;
+        **\*.jpg;
+        **\*.gif;
+        **\*.ico;
+        **\*.svg;
+        **\*.tiff;
+        **\*.eot;
+        **\*.ttf;
+        **\*.woff;
+        **\*.woff2
+    </_DefaultContentTypes>
+  </PropertyGroup>
 
-        <!-- [STATIC RESOURCE FILES] - add more as needed (fonts etc.) -->
-        <Content Include="**\*.js;**\*.css;**\*.xml;**\*.txt;**\*.html;**\*.htm" Exclude="$(BaseIntermediateOutputPath)**\*.*">
-            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-        </Content>
+  <ItemGroup>
 
-        <Content Include="**\*.png;**\*.jpg;**\*.gif;**\*.ico;**\*.svg;**\*.tiff;**\*.eot;**\*.ttf;**\*.woff;**\*.woff2" Exclude="$(BaseIntermediateOutputPath)**\*.*">
-            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-        </Content>
-        
-        <Content Include="Content\**\*.*" Exclude="$(BaseIntermediateOutputPath)**\*.*">
-            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-        </Content>
+    <Content Include="$(_DefaultContentTypes)" Exclude="$(BaseIntermediateOutputPath)**\*.*;bin\**\*.*;**\web.config;Web.*.config">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
 
-        <Content Include="**\*.manifest" Exclude="$(BaseIntermediateOutputPath)**\*.*">
-            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-        </Content>
-
-        <Content Include="Config\**\*.xml" Exclude="$(BaseIntermediateOutputPath)**\*.*">
-            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
-        </Content>
-        
-        <Content Remove="bin\**\*.*" />
-        
-        <None Include="**\Web.config" Exclude="$(BaseIntermediateOutputPath)**\*.*">
-            <SubType>Designer</SubType>
-        </None>
-        <None Include="Web.*.config">
-            <DependentUpon>Web.config</DependentUpon>
-        </None>
-        <None Include="Web.*.config">
-            <DependentUpon>Web.config</DependentUpon>
-        </None>
-    </ItemGroup>
+    <None Include="**\Web.config" Exclude="$(BaseIntermediateOutputPath)**\*.*">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.*.config" Exclude="$(BaseIntermediateOutputPath)**\*.*">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
 </Project>

@@ -5,5 +5,4 @@
     <AssemblyName>$moduleNamespace$</AssemblyName>
     <SitecoreRoleType>website</SitecoreRoleType>
   </PropertyGroup>
-  <Import Project="$(SolutionDir)\_Build\props\_SitecoreRoleType.props" />
 </Project>

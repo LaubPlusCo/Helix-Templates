@@ -37,7 +37,7 @@ Publish.Properties.props
     <PublishPathXCIndexWorker>$publishPathXCIndexWorker$</PublishPathXCIndexWorker>
     <PublishPathXCAutomationEngine>$publishPathXCAutomationEngine$</PublishPathXCAutomationEngine>
     <PublishPathIdentity>$publishPathIdentity$</PublishPathIdentity>
-
+    
     <SpecialReleaseBuildFolders>$useReleaseBuildFolders$</SpecialReleaseBuildFolders>
 
 

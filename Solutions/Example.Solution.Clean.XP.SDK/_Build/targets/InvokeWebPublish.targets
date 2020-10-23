@@ -16,6 +16,7 @@ InvokeWebPublish.targets
     <PropertyGroup>
         <_WebApplicationTargetsPath>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets</_WebApplicationTargetsPath>
     </PropertyGroup>
+    
     <Import Project="$(_WebApplicationTargetsPath)" />
 
     <PropertyGroup>

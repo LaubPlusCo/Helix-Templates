@@ -23,5 +23,4 @@
     <PublishPathXCAutomationEngine>$releasePublishPathXCAutomationEngine$</PublishPathXCAutomationEngine>
     <PublishPathIdentity>$releasePublishPathIdentity$</PublishPathIdentity>
   </PropertyGroup>
-
 </Project>
