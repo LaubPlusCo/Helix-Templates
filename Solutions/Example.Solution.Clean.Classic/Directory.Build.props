@@ -15,7 +15,7 @@ Directory.Build.props
 
 <Project>
   <PropertyGroup>
-    <AutoPublishOnBuild Condition="$(TargetFramework.StartsWith('net4'))">$autoPublishOnBuild$<AutoPublishOnBuild>
+    <AutoPublishOnBuild Condition="$(TargetFramework.StartsWith('net4'))">$autoPublishOnBuild$</AutoPublishOnBuild>
       <_DirectoryBuildUserPropsFile Condition="'$(_DirectoryBuildUserPropsFile)' == ''">$(MSBuildThisFileDirectory)\Directory.Build.props.user</_DirectoryBuildUserPropsFile>
     </PropertyGroup>
 
