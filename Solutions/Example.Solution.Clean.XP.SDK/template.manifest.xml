@@ -71,7 +71,7 @@ See comments found in ./_Build folder files for more details on build and auto p
         <file path="/_build/targets/TouchConfig.targets" />
         <file path="/_build/targets/PublishSingleItem.targets" />
         <file path="/_build/targets/TransformXml.targets" />
-        <file path="/_build/targets/RemoveNotPublishedAssemblies.targets" />
+        <file path="/_build/targets/RemoveFilesFromPublish.targets" />
       </virtualSolutionFolder>
     </virtualSolutionFolder>
   </virtualSolutionFolders>

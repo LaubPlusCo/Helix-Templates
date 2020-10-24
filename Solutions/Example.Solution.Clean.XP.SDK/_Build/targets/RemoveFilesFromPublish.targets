@@ -7,7 +7,7 @@ RemoveDoNotPublishAssembly.targets
 -->
 
 <Project>
-  <Target Name="RemoveFilesFromWebPublish" AfterTargets="ResolveReferences" Condition="$(LegacyRemoveNotPublishedAssemblies) == 'true'">
+  <Target Name="RemoveFilesFromPublish" AfterTargets="ResolveReferences" Condition="$(LegacyRemoveNotPublishedAssemblies) == 'true'">
     <ItemGroup>
       <_IgnoredFiles Include="@(SitecoreAssemblies)" Condition="'@(SitecoreAssemblies)' != ''" />
       <ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)" Condition="'%(Filename)' != '' and '@(_IgnoredFiles)' != ''" />
