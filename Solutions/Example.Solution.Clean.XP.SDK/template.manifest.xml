@@ -62,7 +62,6 @@ See comments found in ./_Build folder files for more details on build and auto p
         <file path="/_build/props/Default.Publishing.props" />
         <file path="/_build/props/Identity.Publishing.props" />
         <file path="/_build/props/Identity.References.props" />
-        <file path="/_build/props/Website.DoNotPublishAssemblies.props" />
         <file path="/_build/props/Website.Publishing.props" />
         <file path="/_build/props/Website.References.props" />
       </virtualSolutionFolder>
