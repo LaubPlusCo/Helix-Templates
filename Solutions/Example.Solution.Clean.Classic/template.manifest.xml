@@ -1,0 +1,31 @@
+<templateManifest typeOfTemplate="Solution">
+  <name>Clean simple Helix Solution - 'CLASSIC' style (example)</name>
+  <description>An example blank Helix Solution - 'classic' for using the old cs project format. 
+    </description>
+  <version>1.0.2</version>
+  <author>Anders Laub</author>
+  <sourceFolder>/src</sourceFolder>
+  <saveOnCreate>true</saveOnCreate>
+  <templateEngine type="LaubPlusCo.Foundation.HelixTemplating.TemplateEngine.DefaultHelixTemplateEngine, LaubPlusCo.Foundation.HelixTemplating" />
+  <replacementTokens>
+    <token key="$autoPublishOnBuild$" displayName="Auto-publish solution on local build" default="true" input="Checkbox" required="true" />
+    <token key="$publishPath$" displayName="Publish to file path" required="true" default="C:\Websites\my.sitecore.local" input="Text" />
+  </replacementTokens>
+  <projectsToAttach />
+  <virtualSolutionFolders>
+    <virtualSolutionFolder name="_Solution">
+      <file path="/$emptyString$.editorconfig" />
+      <file path="/$emptyString$.gitattributes" />
+      <file path="/$emptyString$.gitignore" />
+      <file path="/README.md" />
+    </virtualSolutionFolder>
+    <virtualSolutionFolder name="_Build">
+      <file path="/Directory.Build.targets" />
+      <file path="/Directory.Build.props" />
+      <file path="/nuget.config" />
+    </virtualSolutionFolder>
+  </virtualSolutionFolders>
+  <ignoreFiles>
+    <file path="/template.manifest.xml" />
+  </ignoreFiles>
+</templateManifest>

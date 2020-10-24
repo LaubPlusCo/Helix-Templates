@@ -1,0 +1,37 @@
+<!--
+***********************************************************************************************
+Directory.Build.props
+  
+  Solution-wide automatic loading of build properties. 
+  
+  Note; this is an example setup.
+
+
+    $(SitecoreRoleType) is used to conditionally load msbuild properties.
+
+    Set this property in .csproj files
+    
+        <SitecoreRoleType>website|identity|automationengine|indexworker|..</SitecoreRoleType>
+
+  See the ./_build/props folder and imported files for details.
+  
+                                                                      [Anders Laub // Laub+Co]
+***********************************************************************************************
+-->
+
+<Project>
+    <PropertyGroup>
+        <SolutionDir Condition="'$(SolutionDir)' == ''">$(MSBuildThisFileDirectory)</SolutionDir>
+        <_SolutionBuildPropertiesPath>$(SolutionDir)\_Build\props\</_SolutionBuildPropertiesPath>
+        <_DefaultUserProps>$(SolutionDir)\Default.Properties.props.user</_DefaultUserProps>
+         <CustomBeforeMicrosoftCommonTargets>$(_SolutionBuildPropertiesPath)_SitecoreRoleType.props</CustomBeforeMicrosoftCommonTargets>
+    </PropertyGroup>
+
+    <!-- Import default solution wide properties  -->
+    <Import Project="$(_SolutionBuildPropertiesPath)Default.*.props" />
+    
+    <!-- Override default properties using .user file if exists -->    
+    <Import Project="$(_DefaultUserProps)" 
+            Condition="exists('$(_DefaultUserProps)')" />
+            
+</Project>
