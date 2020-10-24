@@ -15,18 +15,9 @@ AutoPublish.targets
 -->
 
 <Project>
-    <PropertyGroup>
-        <!-- BUG FIX; Bug caused by name-clash was introduced in dotnet core 3.0.x / has been fixed by MS in later dotnet releases! -->
-        <WebPublishDependsOn>$([System.String]::Copy('$(WebPublishDependsOn)').Replace('ValidatePublishProfileSettings', '').Replace(';','').Trim())</WebPublishDependsOn>
-    </PropertyGroup>
-
 
     <Target Name="AutoPublish" AfterTargets="Build" DependsOnTargets="$(AutoPublishDependsOn)" Condition="'$(AutoPublishOnBuild)' == 'true' AND '$(NotPublished)' != 'true'">
         <Message Importance="High" Text="Auto published to $(PublishTargetDirectory)" />
-    </Target>
-
-    <Target Name="InvokeWebPublish">
-        <CallTarget Targets="WebPublish" />
     </Target>
 
 </Project>

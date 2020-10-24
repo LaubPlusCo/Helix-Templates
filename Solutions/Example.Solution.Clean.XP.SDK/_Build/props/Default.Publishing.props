@@ -40,8 +40,6 @@ Publish.Properties.props
     
     <SpecialReleaseBuildFolders>$useReleaseBuildFolders$</SpecialReleaseBuildFolders>
 
-
-
     <!-- PublishTargetDirectory 
             The default target directory for publishing. Defaults to the website root directory.
             

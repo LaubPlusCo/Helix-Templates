@@ -1,0 +1,36 @@
+<!--
+***********************************************************************************************
+Directory.Build.props
+  
+  Example; Sets auto publish on build for net framework modules.  
+  Depends on the VS WebApplication target WebPublish. 
+  
+  Also see Directory.Build.targets file.
+
+  For local dev setups properties can be overridden in Directory.Build.props.user file
+  
+                                                                      [Anders Laub // Laub+Co]
+***********************************************************************************************
+-->
+
+<Project>
+  <PropertyGroup>
+    <AutoPublishOnBuild Condition="$(TargetFramework.StartsWith('net4'))">$autoPublishOnBuild$<AutoPublishOnBuild>
+      <_DirectoryBuildUserPropsFile Condition="'$(_DirectoryBuildUserPropsFile)' == ''">$(MSBuildThisFileDirectory)\Directory.Build.props.user</_DirectoryBuildUserPropsFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(AutoPublishOnBuild)'=='true'">
+      <BuildingInsideVisualStudio>False</BuildingInsideVisualStudio>
+      <WebPublishMethod>FileSystem</WebPublishMethod>
+      <LastUsedBuildConfiguration>$(Configuration)</LastUsedBuildConfiguration>
+      <LastUsedPlatform>Any CPU</LastUsedPlatform>
+      <ExcludeApp_Data>False</ExcludeApp_Data>
+      <DeleteExistingFiles>False</DeleteExistingFiles>
+      <DeployOnBuild>False</DeployOnBuild>
+      <ExcludeFilesFromDeployment></ExcludeFilesFromDeployment>
+      <publishUrl>$publishPath$</publishUrl>
+    </PropertyGroup>
+
+    <Import Project="$(_DirectoryBuildUserPropsFile)" Condition="Exists('$(_DirectoryBuildUserPropsFile)')"/>
+
+  </Project>
