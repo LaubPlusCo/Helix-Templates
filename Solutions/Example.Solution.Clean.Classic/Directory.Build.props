@@ -16,21 +16,12 @@ Directory.Build.props
 <Project>
   <PropertyGroup>
     <AutoPublishOnBuild Condition="$(TargetFramework.StartsWith('net4'))">$autoPublishOnBuild$</AutoPublishOnBuild>
-      <_DirectoryBuildUserPropsFile Condition="'$(_DirectoryBuildUserPropsFile)' == ''">$(MSBuildThisFileDirectory)\Directory.Build.props.user</_DirectoryBuildUserPropsFile>
-    </PropertyGroup>
+    <_DirectoryBuildUserPropsFile Condition="'$(_DirectoryBuildUserPropsFile)' == ''">$(MSBuildThisFileDirectory)\Directory.Build.props.user</_DirectoryBuildUserPropsFile>
+    <publishUrl>$publishPath$</publishUrl>
+  </PropertyGroup>
 
-    <PropertyGroup Condition="'$(AutoPublishOnBuild)'=='true'">
-      <BuildingInsideVisualStudio>False</BuildingInsideVisualStudio>
-      <WebPublishMethod>FileSystem</WebPublishMethod>
-      <LastUsedBuildConfiguration>$(Configuration)</LastUsedBuildConfiguration>
-      <LastUsedPlatform>Any CPU</LastUsedPlatform>
-      <ExcludeApp_Data>False</ExcludeApp_Data>
-      <DeleteExistingFiles>False</DeleteExistingFiles>
-      <DeployOnBuild>False</DeployOnBuild>
-      <ExcludeFilesFromDeployment></ExcludeFilesFromDeployment>
-      <publishUrl>$publishPath$</publishUrl>
-    </PropertyGroup>
 
-    <Import Project="$(_DirectoryBuildUserPropsFile)" Condition="Exists('$(_DirectoryBuildUserPropsFile)')"/>
 
-  </Project>
+  <Import Project="$(_DirectoryBuildUserPropsFile)" Condition="Exists('$(_DirectoryBuildUserPropsFile)')"/>
+
+</Project>
