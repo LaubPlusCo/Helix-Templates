@@ -105,7 +105,9 @@
     <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="$(SolutionDir)_Build\Local.pubxml">
+      <Link>Properties\PublishProfiles\Local.pubxml</Link> 
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

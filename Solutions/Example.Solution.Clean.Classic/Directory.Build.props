@@ -15,11 +15,9 @@ Directory.Build.props
 
 <Project>
   <PropertyGroup>
-    <AutoPublishOnBuild Condition="$(TargetFramework.StartsWith('net4'))">$autoPublishOnBuild$</AutoPublishOnBuild>
+    <AutoPublishOnBuild>$autoPublishOnBuild$</AutoPublishOnBuild>
     <_DirectoryBuildUserPropsFile Condition="'$(_DirectoryBuildUserPropsFile)' == ''">$(MSBuildThisFileDirectory)\Directory.Build.props.user</_DirectoryBuildUserPropsFile>
-    <publishUrl>$publishPath$</publishUrl>
   </PropertyGroup>
-
 
 
   <Import Project="$(_DirectoryBuildUserPropsFile)" Condition="Exists('$(_DirectoryBuildUserPropsFile)')"/>
