@@ -1,7 +1,7 @@
 <templateManifest typeOfTemplate="Module">
-  <name>Sitecore Helix Module - 'CLASSIC' PROJECT STYLE (example)</name>
-  <description>Example empty Helix module - "old style" using classic csproj format.</description>
-  <version>1.0.1</version>
+  <name>Sitecore Helix Module - 'CLASSIC' project style (example)</name>
+  <description>Example empty Helix module - "old style" using classic csproj format. See 'CLASSIC' solution example template for auto-publish on build setup.</description>
+  <version>1.0.2</version>
   <author>Anders Laub</author>
   <sourceFolder>/src</sourceFolder>
   <saveOnCreate>true</saveOnCreate>

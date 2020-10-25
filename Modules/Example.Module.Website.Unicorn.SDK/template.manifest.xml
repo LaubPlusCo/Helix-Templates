@@ -1,5 +1,5 @@
 <templateManifest typeOfTemplate="Module">
-  <name>Website Sitecore Helix Module with Unicorn - SDK PROJECT STYLE (example)</name>
+  <name>Sitecore Helix Module with Unicorn - SDK PROJECT STYLE (example)</name>
   <description>Targets Website roles (standalone,cm,cd). IncludeS Unicorn configuration.</description>
   <description></description>
   <version>2.0.0</version>

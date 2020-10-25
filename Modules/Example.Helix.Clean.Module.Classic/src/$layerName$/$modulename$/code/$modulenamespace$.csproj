@@ -98,7 +98,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\$layerName$\$moduleNamespace$.config" />
-    <None Include="Properties\PublishProfiles\Local.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

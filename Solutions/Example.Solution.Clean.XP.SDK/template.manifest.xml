@@ -1,8 +1,8 @@
 <templateManifest typeOfTemplate="Solution">
-  <name>Empty Helix Solution for a Sitecore XP 9.3 solution - SDK PROJECT STYLE (example)</name>
+  <name>Empty Helix Solution for a Sitecore XP 9.3 solution - Support for SDK project style (example)</name>
   <description>This template is configured to publish to a locally installed Sitecore XP0 setup.
 
-Important: This template use the SDK project file format and require VS2017 (15.6) or newer. 
+Important: This template require use of the SDK project file format in .csproj files and require VS2017 (15.6) or newer. 
 See comments found in ./_Build folder files for more details on build and auto publish from Visual Studio.
   </description>
   <version>1.1.0</version>

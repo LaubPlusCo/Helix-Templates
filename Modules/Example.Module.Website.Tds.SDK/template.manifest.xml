@@ -1,5 +1,5 @@
 <templateManifest typeOfTemplate="Module">
-  <name>Website Helix Module with TDS - SDK PROJECT STYLE (example)</name>
+  <name>Sitecore Helix Module with TDS - SDK project style (example)</name>
   <description>Targets Website roles (standalone,cm,cd). Include TDS projects</description>
   <version>2.0.0</version>
   <author>Anders Laub</author>

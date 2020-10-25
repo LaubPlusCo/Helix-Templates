@@ -1,6 +1,6 @@
 <templateManifest typeOfTemplate="Solution">
-  <name>Clean simple Helix Solution - 'CLASSIC' style (example)</name>
-  <description>An example blank Helix Solution - 'classic' for using the old cs project format. 
+  <name>Clean simple Helix Solution - Support for 'CLASSIC' project style (example)</name>
+  <description>An example blank 'classic' Helix Solution with support for using the old csproj format. 
     </description>
   <version>1.0.2</version>
   <author>Anders Laub</author>
