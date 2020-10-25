@@ -1,5 +1,5 @@
 <templateManifest typeOfTemplate="Module">
-  <name>Sitecore Helix Module - SDK PROJECT STYLE (example) </name>
+  <name>Sitecore Helix Module - SDK project style (example) </name>
   <description>Targets platform/website - standalone,cm,cd)</description>
   <version>2.0.0</version>
   <author>Anders Laub</author>
@@ -15,7 +15,7 @@
     <token key="$moduleName$" displayName="Module name" default="$safeprojectname$" input="Text" required="true" validationType="LaubPlusCo.Foundation.HelixTemplating.Tokens.ValidateModuleNameToken, LaubPlusCo.Foundation.HelixTemplating" />
     <token key="$moduleNamespace$" displayName="Module namespace" required="true" default="$layerName$.$safeprojectname$" input="Text" suggestType="LaubPlusCo.Foundation.HelixTemplating.Tokens.SuggestNamespaceToken, LaubPlusCo.Foundation.HelixTemplating" validationType="LaubPlusCo.Foundation.HelixTemplating.Tokens.ValidateNamespaceToken, LaubPlusCo.Foundation.HelixTemplating" />
     <token key="$projectrootfolderName$" displayName="Project root folder name (f. ex. code, website, platform, commerce, xconnect)" required="true" default="platform" input="Text" />
-    <token key="$netframeworkversion$" displayName="Target Framework" default="net472" required="true" input="Text" />
+    <token key="$netframeworkversion$" displayName="Target Framework" default="net48" required="true" input="Text" />
   </replacementTokens>
   <projectsToAttach>
     <projectFile path="/src/$layerName$/$modulename$/$projectrootfolderName$/$moduleNamespace$.csproj" />
