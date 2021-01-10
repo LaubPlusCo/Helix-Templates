@@ -5,4 +5,7 @@
     <AssemblyName>$moduleNamespace$</AssemblyName>
     <SitecoreRoleType>website</SitecoreRoleType>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SupportsSystemWeb" />
+  </ItemGroup>
 </Project>
