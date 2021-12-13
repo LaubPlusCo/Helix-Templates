@@ -1,0 +1,18 @@
+<!--
+***********************************************************************************************
+ Rendering.Properties.props
+
+    To target multiple rendering host containers (multisite) with different build outputs, use 
+    the OutputFolderName in the project layer .csproj files to toggle their publish path.
+
+                                                                      [Anders Laub // Laub+Co]                                                                      
+***********************************************************************************************
+-->
+
+<Project>
+    <PropertyGroup Condition="'$(IsDeploymentModule)' == 'true'">
+        <PublishOnBuild>true</PublishOnBuild>
+        <OutputFolderName Condition="'$(OutputFolderName)'==''" >rendering</OutputFolderName>
+        <PublishDir>$(SolutionDir)docker\deploy\$(OutputFolderName)</PublishDir>
+    </PropertyGroup>
+</Project>

@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = $moduleNamespace$.Rendering
+build_property.ProjectDir = d:\Projects\LaubplusCo\upgrade\Helix-Templates\Modules\Example.AspNet.Platform.Feature.Module\src\Feature\$modulename$\rendering\

@@ -1,8 +1,8 @@
 <templateManifest typeOfTemplate="Solution">
-  <name>Clean simple Helix Solution - Support for 'CLASSIC' project style (example)</name>
+  <name>Simple "legacy" Helix Solution - Support for 'CLASSIC' project style (example)</name>
   <description>An example blank 'classic' Helix Solution with support for using the old csproj format. 
     </description>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <author>Anders Laub</author>
   <sourceFolder>/src</sourceFolder>
   <saveOnCreate>true</saveOnCreate>

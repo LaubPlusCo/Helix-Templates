@@ -1,0 +1,62 @@
+<templateManifest typeOfTemplate="Solution">
+  <name>Empty Helix Solution for Sitecore 10.2 using Sitecore AspNet rendering host (example)</name>
+  <description>This template contain a simple solution build setup for a Sitecore 10.2 XP solution.
+
+The MSBuild property SitecoreRoleType is used to toggle role specific msbuild properties on build time to easily publish to multi-targets on solution build.
+
+The template contain pre-defined roletypes for platform (for cm/cd), rendering host, and identity. 
+
+Additional roletypes (xp0 roles etc.) by following the same naming convention as seen in the .\_Build\props
+
+The msbuild setup works well with a local docker compose setup (not included in template).
+
+See f. ex. https://github.com/Sitecore/MVP-Site for usage example with Docker.
+
+Important: This template require use of the SDK project file format in .csproj files and require VS2017 (15.6) or newer. 
+See comments found in ./_Build folder files for more details on build and auto publish from Visual Studio.
+  </description>
+  <version>1.0.0</version>
+  <author>Anders Laub</author>
+  <sourceFolder>/src</sourceFolder>
+  <saveOnCreate>true</saveOnCreate>
+  <templateEngine type="LaubPlusCo.Foundation.HelixTemplating.TemplateEngine.DefaultHelixTemplateEngine, LaubPlusCo.Foundation.HelixTemplating" />
+  <replacementTokens>
+    <token key="$sitecorePlatformVersion$" displayName="Sitecore Platform version" default="10.2.*" helpText="Used for solution-wide website package references. See .\Packages.props" required="true" input="Text" />
+    <token key="$sitecoreAspNetVersion$" displayName="Sitecore AspNet version" default="19.0.*" helpText="Used for solution-wide website package references. See .\Packages.props" required="true" input="Text" />
+    <token key="$publishRootPath$" displayName="Publish root path" default="$(SolutionDir)docker\deploy" helpText="Root publish path for all Sitecore instances." input="Text" />
+  </replacementTokens>
+  <projectsToAttach />
+  <virtualSolutionFolders>
+    <virtualSolutionFolder name="_Solution">
+      <file path="/$emptyString$.editorconfig" />
+      <file path="/$emptyString$.gitattributes" />
+      <file path="/$emptyString$.gitignore" />
+      <file path="/nuget.config" />
+      <file path="/README.md" />
+    </virtualSolutionFolder>
+    <virtualSolutionFolder name="_Build">
+      <file path="/Directory.Build.targets" />
+      <file path="/Directory.Build.props" />
+      <file path="/Packages.props" />
+      <virtualSolutionFolder name="props">
+        <file path="/_build/props/_SitecoreRoleType.props" />
+        <file path="/_build/props/Default.Compiler.props" />
+        <file path="/_build/props/Default.Properties.props" />
+        <file path="/_build/props/Identity.Properties.props" />
+        <file path="/_build/props/Platform.Properties.props" />
+        <file path="/_build/props/Platform.AssemblyBindings.config" />
+        <file path="/_build/props/Platform.ProjectContent.props" />
+        <file path="/_build/props/Platform.References.props" />
+        <file path="/_build/props/Rendering.Properties.props" />
+      </virtualSolutionFolder>
+    </virtualSolutionFolder>
+  </virtualSolutionFolders>
+  <skipAttach>
+    <file path="/src/Foundation/.gitkeep" />
+    <file path="/src/Feature/.gitkeep" />
+    <file path="/src/Project/.gitkeep" />
+  </skipAttach>
+  <ignoreFiles>
+    <file path="/template.manifest.xml" />
+  </ignoreFiles>
+</templateManifest>

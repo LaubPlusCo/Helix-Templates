@@ -1,0 +1,25 @@
+{
+  "FilePath": "d:\\Projects\\LaubplusCo\\upgrade\\Helix-Templates\\Modules\\Example.AspNet.Platform.Feature.Module\\src\\Feature\\$modulename$\\rendering\\$moduleNamespace$.Rendering.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-3.0",
+    "LanguageVersion": "3.0",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-3.0"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": {
+    "TagHelpers": [],
+    "CSharpLanguageVersion": 800
+  },
+  "RootNamespace": "$moduleNamespace$.Rendering",
+  "Documents": [
+    {
+      "FilePath": "d:\\Projects\\LaubplusCo\\upgrade\\Helix-Templates\\Modules\\Example.AspNet.Platform.Feature.Module\\src\\Feature\\$modulename$\\rendering\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
+  "SerializationFormat": "0.2"
+}

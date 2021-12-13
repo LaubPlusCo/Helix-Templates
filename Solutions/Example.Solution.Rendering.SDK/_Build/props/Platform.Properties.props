@@ -1,0 +1,28 @@
+<!--
+***********************************************************************************************
+ Platform.Properties.props
+                                                                      [Anders Laub // Laub+Co]                                                                      
+***********************************************************************************************
+-->
+
+<Project>
+    <PropertyGroup>
+        <DeployOnBuild>False</DeployOnBuild>
+        <IsLocalDockerDeploy>True</IsLocalDockerDeploy>
+        <WebPublishOnBuild>True</WebPublishOnBuild>
+        <!-- Set solution-wide config file for binding redirects, to reduce msbuild warns -->
+        <AppConfig>$(SolutionDir)\_Build\props\Platform.AssemblyBindings.config</AppConfig>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(IsLocalDockerDeploy)'=='true'">
+        <publishUrl>$(SolutionDir)docker\deploy\$(SitecoreRoleType)</publishUrl>
+        <BuildingInsideVisualStudio Condition="'$(DeployOnBuild)'=='true'">False</BuildingInsideVisualStudio>
+        <WebPublishMethod>FileSystem</WebPublishMethod>
+        <LastUsedBuildConfiguration>$(Configuration)</LastUsedBuildConfiguration>
+        <LastUsedPlatform>Any CPU</LastUsedPlatform>
+        <ExcludeApp_Data>False</ExcludeApp_Data>
+        <DeleteExistingFiles>False</DeleteExistingFiles>
+        <ExcludeFilesFromDeployment></ExcludeFilesFromDeployment>
+    </PropertyGroup>
+
+</Project>
